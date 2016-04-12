@@ -63,16 +63,27 @@ input {
 /*           GRID STYLE            */
 /*---------------------------------*/
 
-.flex-container {
-  display: flex;
-  justify-content: space-around;
-  width: 980px;
-  margin: 60px auto;
+ul {
+	list-style:none;
+	margin: 0 auto;
+	padding: 0;
+	display: block;
+	max-width: 980px;
+	text-align: center;
+}
+ul li {
+	display: inline-block;
+	padding: 8px;
+	background:white;
+	margin:10px;
+}
+ul li img {
+	display: block;
+}
+a {
+	text-decoration: none;
 }
 
-.flex-item {
-  margin: auto 30px;
-}
 
 
 /*---------------------------------*/
@@ -102,14 +113,16 @@ input {
 /*---------------------------------*/
 .arrow-1 {
 	position: absolute;
-	top: 380px;
-	left: 140px;
-	font-size: 50px;
+	top: 500px;
+	left: 190px;
+	font-size: 80px;
+	padding: 10px;
 }
 
 .arrow-2 {
 	position: absolute;
-	top: 380px;
-	left: 1045px;
-	font-size: 50px;
+	top: 500px;
+	right: 190px;
+	font-size: 80px;
+	padding: 10px;
 }
