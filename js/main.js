@@ -11,10 +11,11 @@ $(document).ready(function(){
     var $caption = $("<p></p>");
     var $preArrow = $("<div class='arrow-1'>&laquo</div>");
     var $nextArrow = $("<div class='arrow-2'>&raquo</div>");
-    var $close = $('<button>close</button>');
+    var $close = $('<button>X</button>');
     var totalImage = ["img/01.jpg","img/02.jpg","img/03.jpg","img/04.jpg"];
-        console.log(totalImage);
+
     
+
     //An image to overlay
     $overlay.append($image);
     $overlay.append($close);
@@ -49,7 +50,7 @@ $(document).ready(function(){
       
 
       $(".arrow-1").click(function(){
-        var next_src = $(this).siblings().attr('src');
+        var next_src = $(this).siblings().attr("src");
         console.log(next_src);
         for(var i = 0; i<totalImage.length; i++){
           $('#overlay img').attr("src", totalImage[i]);
