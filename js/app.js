@@ -6,20 +6,21 @@ $(document).ready(function() {
 
         var current_query = $(this).val();
 
-        if (current_query != "") {
-            $(".gallery li a").hide();
+
+        if (current_query !== "") {
+            $(".gallery li a").hide("ease", function(){});
 
             $(".gallery li a").each(function() {
 
                 var current_keyword = $(this).attr('data-keywords');
 
                 if (current_keyword.indexOf(current_query) >= 0) {
-                    $(this).show();
+                    $(this).show("ease", function(){});
                 }
 
             });
         } else {
-            $(".gallery li a").show();
+            $(".gallery li a").show("ease", function(){});
         }
     });
 
