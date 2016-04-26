@@ -4,15 +4,16 @@ $(document).ready(function() {
     //Fiter Images by data-keywords
     $('#search').keyup(function() {
 
-        var current_query = $(this).val().toLowerCase();
-
+        var current_query = $("#search").val().toLowerCase();
+        
 
         if (current_query !== "") {
-            $(".gallery li a").hide("slow", function(){});
-
+            
+            $(".gallery li a").hide();
+            
             $(".gallery li a").each(function() {
 
-                var current_keyword = $(this).attr('data-keywords');
+                var current_keyword = $(this).attr('data-keywords').toLowerCase();
 
                 if (current_keyword.indexOf(current_query) >= 0) {
                     $(this).show();
@@ -20,7 +21,7 @@ $(document).ready(function() {
 
             });
         } else {
-            $(".gallery li a").show("slow", function(){});
+            $(".gallery li a").show();
         }
     });
 
